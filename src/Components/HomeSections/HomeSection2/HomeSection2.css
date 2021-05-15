@@ -1,0 +1,4 @@
+.home-section2--wrapper{
+    display: grid;
+    grid-template-columns: repeat();
+}

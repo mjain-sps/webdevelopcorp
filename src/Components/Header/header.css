@@ -1,7 +1,13 @@
 .header-wrapper {
   width: 100%;
   height: 140px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 5;
 }
+
+/* Company Info CSS */
 .header-companyinfo {
   width: 100%;
   height: 40px;
@@ -19,7 +25,7 @@
   font-weight: bold;
   font-family: "Oswald", sans-serif;
 }
-.header-companyinfo .header-icon {
+.header-icon {
   color: var(--lightPink);
   margin: 0 5px;
 }
@@ -28,11 +34,13 @@
   justify-content: flex-start;
 }
 .header-companyinfo--email {
-  margin: 0 10px;
+  margin: 0px 10px 0px 0px;
 }
 .header-companyinfo--address {
   margin: 0px 10px 0px 0px;
 }
+
+/* Header Nav CSS starts */
 .header-nav {
   height: 100px;
   display: flex;
@@ -85,9 +93,65 @@
 .bars-icon:hover {
   background-color: black;
 }
+.toggleHeader--wrapper {
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+}
+.toggleHeader-content {
+  position: absolute;
+  top: 0%;
+  width: 30vw;
+  height: 100vh;
+  right: 0%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0px 20px;
+}
 
+.toggleHeader-content__close {
+  color: var(--lightPink);
+  text-align: left;
+  padding: 10px;
+  margin: 5px 0px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.toggleHeader-content__main {
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.toggleHeader-content__main > h3 {
+  text-align: center;
+}
+.toggleHeader-content__main > p {
+  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+}
 @media (max-width: 768px) {
   .header-navItems {
     display: none;
+  }
+  .toggleHeader-content {
+    width: 50vw;
+  }
+  .header-companyinfo--address {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and(max-width: 992px) {
+  .toggleHeader-content {
+    width: 40vw;
   }
 }

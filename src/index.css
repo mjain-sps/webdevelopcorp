@@ -3,7 +3,6 @@
 
 body {
   margin: 0;
-  font-family: "Oswald", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,10 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+* {
+  font-family: "Oswald", sans-serif;
+}
+*a {
+  text-decoration: none;
+}
 
 :root {
   --orange: #ff4a17;
   --lightPink: #ffaea1;
   --backgroundBlack: #121e2d;
   --black: #0d1723;
+  --whiteSmoke: #eef2f5;
 }
