@@ -1,0 +1,93 @@
+.header-wrapper {
+  width: 100%;
+  height: 140px;
+}
+.header-companyinfo {
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 5px;
+  background-color: white;
+  color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-companyinfo span {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+}
+.header-companyinfo .header-icon {
+  color: var(--lightPink);
+  margin: 0 5px;
+}
+.header-companyinfo-child1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.header-companyinfo--email {
+  margin: 0 10px;
+}
+.header-companyinfo--address {
+  margin: 0px 10px 0px 0px;
+}
+.header-nav {
+  height: 100px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--orange);
+}
+.header-nav--wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 10px 20px;
+  width: 90%;
+}
+.header-brandname {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0px 10px;
+  font-weight: bold;
+}
+.header-navItems {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0px 0px 0px 20px;
+}
+.header-navItems a {
+  color: white;
+  text-decoration: none;
+  margin: 0px 8px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.header-navItems a:hover {
+  color: white;
+}
+.toggle-Menu {
+  width: 10%;
+  color: white;
+}
+.bars-icon {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  transition: 500ms ease;
+}
+.bars-icon:hover {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .header-navItems {
+    display: none;
+  }
+}
