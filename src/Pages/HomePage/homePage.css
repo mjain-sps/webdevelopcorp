@@ -73,6 +73,23 @@
   height: 200px;
   object-fit: contain;
 }
+
+/* SECTION 2 CSS STARTS HERE */
+.homePage_section2--wrapper {
+  width: 100%;
+  background-color: var(--whiteSmoke);
+}
+.section2-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-auto-rows: 300px;
+  gap: 10px;
+  width: 75%;
+  margin: 10px auto;
+}
+.homePage_section2--wrapper div {
+  background-color: gray;
+}
 @media (max-width: 768px) {
   .section1--navbar {
     margin: 20px 10px;

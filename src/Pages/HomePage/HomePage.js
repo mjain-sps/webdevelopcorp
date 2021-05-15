@@ -11,6 +11,7 @@ function HomePage({ history }) {
   return (
     <>
       <Layout>
+        {/* Section 1 */}
         <div>
           <div className="homePage_section1--wrapper">
             <div className="section1--navbar">
@@ -53,7 +54,14 @@ function HomePage({ history }) {
         </div>
 
         {/* Section -2 */}
-        
+        <div className="homePage_section2--wrapper">
+          <div className="section2-content">
+            <div>MY NAME IS MADUR</div>
+            <div>MY NAME IS MADUR</div>
+            <div>MY NAME IS MADUR</div>
+            <div>MY NAME IS MADUR</div>
+          </div>
+        </div>
       </Layout>
     </>
   );
