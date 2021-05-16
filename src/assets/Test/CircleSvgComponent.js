@@ -1,6 +1,6 @@
 import React from "react";
 
-function CircleSvgComponent({ className, trigger, text }) {
+function CircleSvgComponent({ className, trigger }) {
   return (
     <>
       <svg
@@ -28,16 +28,6 @@ function CircleSvgComponent({ className, trigger, text }) {
                 dur="5s"
               />
             </path>
-            <text
-              id="count"
-              x="50"
-              y="50"
-              text-anchor="middle"
-              dy="7"
-              font-size="20"
-            >
-              {text}
-            </text>
           </>
         ) : (
           ""

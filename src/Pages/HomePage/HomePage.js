@@ -21,7 +21,16 @@ import webDevelopCorpFeatures from "../../assets/img/banner/WebDevelopmentCorp-S
 //Importing Images - Section 3
 import lookLikeAnExpert1 from "../../assets/img/about/Look-like-an-expert-from-start-1.jpg";
 import lookLikeAnExpert2 from "../../assets/img/about/Look-like-an-expert-from-start-2.jpg";
-
+// Importing Images for section5
+import furnitureEcommerceStoreWebdevelopcorp from "../../assets/img/portfolio/Furniture-ecommerce-store-webdevelopcorp.jpg";
+import restaurantWebsiteTemplateDesign from "../../assets/img/portfolio/Restaurant-website-template-design.jpg";
+import furnitureEcommerceApplication from "../../assets/img/portfolio/furniture-e-commerce-webapplication.jpg";
+import danceAcademyWebsite from "../../assets/img/portfolio/Dance-academy-website-template.jpg";
+import fashionClothingEcommerceApp from "../../assets/img/portfolio/fashion-clothing-accessories-ecommerce-webapp.jpg";
+import onlineFoodDeliveryMobileApplication from "../../assets/img/portfolio/Online-food-delivery-mobile-application-webdevelopcorp.jpg";
+import ecommerceClothingStoreApplication from "../../assets/img/portfolio/E-commerce-clothing-store-webapplication-webdevelopcorp.jpg";
+//Importing images for section 6
+import frequentlyAskedQuestionsWebdevelopcorp from "../../assets/img/misc/Frequently-asked-questions-webdevelopcorp.jpg";
 //Shapes for Animatio
 import ps1 from "../../assets/img/shape/ps1.png";
 import ps3 from "../../assets/img/shape/ps3.png";
@@ -42,6 +51,11 @@ function HomePage({ history }) {
   //useStaet constants
   const [scroll, setSCroll] = useState(null);
   const [triggerSVG, setTriggerSVG] = useState(false);
+
+  const [faqHidden1, setFaqHiden1] = useState(false);
+  const [faqHidden2, setFaqHiden2] = useState(false);
+  const [faqHidden3, setFaqHiden3] = useState(false);
+  const [faqHidden4, setFaqHiden4] = useState(false);
 
   //useEffect to get the DOM elements and trigger observer
   useEffect(() => {
@@ -100,7 +114,6 @@ function HomePage({ history }) {
     };
   }, []);
 
-  console.log(triggerSVG);
   return (
     <>
       <Layout>
@@ -304,28 +317,233 @@ function HomePage({ history }) {
 
         {/* Section 4 ---> Counter up */}
         <div className="homePage_section4--wrapper">
-          <div className="section-4__counterUp">
-            <div className="circle-container">
-              <CircleSvgComponent
-                className="section4-circle-svg"
-                trigger={triggerSVG ? "trigerred" : null}
-              />
+          <div className="section4-content">
+            <div className="section-4__counterUp">
+              <div className="circle-container">
+                <div className="circle-container-flex-item1_3">
+                  <div className="circle-container__section">
+                    <CircleSvgComponent
+                      className="section4-circle-svg"
+                      trigger={triggerSVG ? "trigerred" : null}
+                    />
 
-              {/* <div className="circle-container-separator"></div>
+                    <div className="countUpElement">
+                      <CountUp
+                        duration={7}
+                        start={triggerSVG ? 0 : null}
+                        end={100}
+                      />
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <h3>PROFESSIONAL APPROACH</h3>
+                </div>
 
-              <Circle className="section4-circle-svg" /> */}
+                <div className="circle-container-separator"></div>
+
+                <div className="circle-container-flex-item1_3">
+                  <div className="circle-container__section">
+                    <CircleSvgComponent
+                      className="section4-circle-svg"
+                      trigger={triggerSVG ? "trigerred" : null}
+                    />
+                    <div className="countUpElement">
+                      <CountUp
+                        duration={7}
+                        start={triggerSVG ? 0 : null}
+                        end={100}
+                      />
+                      <span>%</span>
+                    </div>
+                  </div>
+                  <h3>USEFUL SOLUTIONS</h3>
+                </div>
+              </div>
             </div>
-            HELLO
-            <CountUp start={triggerSVG ? 0 : null} end={100} duration={5} />
+
+            <div className="section-4__founderMessage">
+              <h1>
+                TURN YOUR PROJECT FROM MEDIOCRE TO REMARKABLE – DESIGN THAT IS
+                SIMPLE, SEAMLESS AND ALIVE! WITH WEBDEVELOPCORP, YOUR
+                OUTSTANDING WEB PRESENCE IS JUST ONE STEP AWAY. CREATE WITH IT
+                WHAT YOU WILL
+              </h1>
+              <h4>MADHUR JAIN</h4>
+              <h5>FOUNDER</h5>
+            </div>
           </div>
-          <div>
-            <h1>
-              TURN YOUR PROJECT FROM MEDIOCRE TO REMARKABLE – DESIGN THAT IS
-              SIMPLE, SEAMLESS AND ALIVE! WITH WEBDEVELOPCORP, YOUR OUTSTANDING
-              WEB PRESENCE IS JUST ONE STEP AWAY. CREATE WITH IT WHAT YOU WILL
-            </h1>
-            <h4>MADHUR JAIN</h4>
-            <h5>FOUNDER</h5>
+        </div>
+
+        {/* Section 5 Start here. Display all Images in a Grid */}
+        <div className="homePage_section5--wrapper">
+          <img src={furnitureEcommerceStoreWebdevelopcorp} alt="" />
+          <img
+            src={restaurantWebsiteTemplateDesign}
+            alt=""
+            className="restaurantApp-rowspan"
+          />
+          <img
+            src={furnitureEcommerceApplication}
+            alt=""
+            className="furnitureEcommerce-col-span"
+          />
+          <img src={danceAcademyWebsite} alt="" />
+          <img
+            src={fashionClothingEcommerceApp}
+            alt=""
+            className="fashionClothing-col-span"
+          />
+          <img src={onlineFoodDeliveryMobileApplication} alt="" />
+          <img src={ecommerceClothingStoreApplication} alt="" />
+        </div>
+
+        {/* Section 6 FAQ */}
+        <div className="homePage_section6--wrapper">
+          <div className="section6_content">
+            <div className="section6-content__leftsection">
+              <img src={frequentlyAskedQuestionsWebdevelopcorp} alt="" />
+            </div>
+
+            <div className="section6-content__rightsection">
+              <h3>FAQ</h3>
+              <h1>GET YOUR ANSWERS</h1>
+              <div className="faq-questions__div">
+                <div>
+                  <div className="faq-questions__actual-question-div">
+                    <span className="faq__actual-question">
+                      HOW CAN I SETUP MY THEME?
+                    </span>
+                    <span
+                      className="faq__toggle-button"
+                      onClick={() => {
+                        setFaqHiden1(!faqHidden1);
+                        setFaqHiden2(false);
+                        setFaqHiden3(false);
+                        setFaqHiden4(false);
+                      }}
+                    >
+                      +
+                    </span>
+                  </div>
+                  <span
+                    className={
+                      faqHidden1
+                        ? "faq_hiddenDescription show_hidden-faq-desscription"
+                        : "faq_hiddenDescription"
+                    }
+                  >
+                    Its easy and fast. Once you tell us your requirements, our
+                    design team will get in touch with you and will show you
+                    hundreds of themes that match your taste. You may select one
+                    of them and we will show you how your web page will look
+                    like. Of course you can always modify the theme as per your
+                    own requirements.
+                  </span>
+                </div>
+
+                {/*2nd Question  */}
+                <div>
+                  <div className="faq-questions__actual-question-div">
+                    <span className="faq__actual-question">
+                      HOW CAN I SETUP MY THEME?
+                    </span>
+                    <span
+                      className="faq__toggle-button"
+                      onClick={() => {
+                        setFaqHiden1(!faqHidden1);
+                        setFaqHiden2(false);
+                        setFaqHiden3(false);
+                        setFaqHiden4(false);
+                      }}
+                    >
+                      +
+                    </span>
+                  </div>
+                  <span
+                    className={
+                      faqHidden1
+                        ? "faq_hiddenDescription show_hidden-faq-desscription"
+                        : "faq_hiddenDescription"
+                    }
+                  >
+                    Its easy and fast. Once you tell us your requirements, our
+                    design team will get in touch with you and will show you
+                    hundreds of themes that match your taste. You may select one
+                    of them and we will show you how your web page will look
+                    like. Of course you can always modify the theme as per your
+                    own requirements.
+                  </span>
+                </div>
+
+                {/* 3rd Question */}
+                <div>
+                  <div className="faq-questions__actual-question-div">
+                    <span className="faq__actual-question">
+                      HOW CAN I SETUP MY THEME?
+                    </span>
+                    <span
+                      className="faq__toggle-button"
+                      onClick={() => {
+                        setFaqHiden1(!faqHidden1);
+                        setFaqHiden2(false);
+                        setFaqHiden3(false);
+                        setFaqHiden4(false);
+                      }}
+                    >
+                      +
+                    </span>
+                  </div>
+                  <span
+                    className={
+                      faqHidden1
+                        ? "faq_hiddenDescription show_hidden-faq-desscription"
+                        : "faq_hiddenDescription"
+                    }
+                  >
+                    Its easy and fast. Once you tell us your requirements, our
+                    design team will get in touch with you and will show you
+                    hundreds of themes that match your taste. You may select one
+                    of them and we will show you how your web page will look
+                    like. Of course you can always modify the theme as per your
+                    own requirements.
+                  </span>
+                </div>
+
+                {/* 4th Question */}
+                <div>
+                  <div className="faq-questions__actual-question-div">
+                    <span className="faq__actual-question">
+                      HOW CAN I SETUP MY THEME?
+                    </span>
+                    <span
+                      className="faq__toggle-button"
+                      onClick={() => {
+                        setFaqHiden1(!faqHidden1);
+                        setFaqHiden2(false);
+                        setFaqHiden3(false);
+                        setFaqHiden4(false);
+                      }}
+                    >
+                      +
+                    </span>
+                  </div>
+                  <span
+                    className={
+                      faqHidden1
+                        ? "faq_hiddenDescription show_hidden-faq-desscription"
+                        : "faq_hiddenDescription"
+                    }
+                  >
+                    Its easy and fast. Once you tell us your requirements, our
+                    design team will get in touch with you and will show you
+                    hundreds of themes that match your taste. You may select one
+                    of them and we will show you how your web page will look
+                    like. Of course you can always modify the theme as per your
+                    own requirements.
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Layout>
