@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../../Components/Layout/Layout";
+
 import { Link } from "react-router-dom";
+
+// Importing counter-up TP library
+import CountUp from "react-countup";
+
+// Importing Custom Button Component
 import CustomButton from "../../Components/CustomButton/CustomButton";
+
+// Importing CSS
 import "./homePage.css";
 
 // Importing Images
@@ -18,6 +26,10 @@ import lookLikeAnExpert2 from "../../assets/img/about/Look-like-an-expert-from-s
 import ps1 from "../../assets/img/shape/ps1.png";
 import ps3 from "../../assets/img/shape/ps3.png";
 
+// import SVG
+import CircleSvgComponent from "../../assets/Test/CircleSvgComponent";
+
+//Importing FontIcons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGlobe,
@@ -25,9 +37,11 @@ import {
   faMobile,
   faCog,
 } from "@fortawesome/free-solid-svg-icons";
+
 function HomePage({ history }) {
   //useStaet constants
   const [scroll, setSCroll] = useState(null);
+  const [triggerSVG, setTriggerSVG] = useState(false);
 
   //useEffect to get the DOM elements and trigger observer
   useEffect(() => {
@@ -40,6 +54,8 @@ function HomePage({ history }) {
     const section2DOM = document.querySelectorAll(
       ".section2-content__component"
     );
+
+    const circleSVG = document.querySelector(".section4-circle-svg");
 
     //Defining observers along with callbacks and options
     let observer = new IntersectionObserver(
@@ -54,21 +70,37 @@ function HomePage({ history }) {
       },
       { root: null, threshold: [0] }
     );
+    //2nd Observer for counter up SVG
+    let observer2 = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          console.log(entry);
+          setTriggerSVG(true);
+          observer2.unobserve(entry.target);
+        }
+      },
+      { root: null, threshold: [0.9] }
+    );
 
     //Initializing observations
-
     section2DOM.forEach((section) => {
       observer.observe(section);
     });
+    observer2.observe(circleSVG);
 
+    // Component did unmount
     return () => {
       section2DOM.forEach((section) => {
         observer.unobserve(section);
       });
 
+      observer2.unobserve(circleSVG);
       document.removeEventListener("scroll", () => setSCroll(null));
     };
   }, []);
+
+  console.log(triggerSVG);
   return (
     <>
       <Layout>
@@ -267,6 +299,33 @@ function HomePage({ history }) {
           <div className="section3-images">
             <img src={lookLikeAnExpert1} className="section3-images__expert1" />
             <img src={lookLikeAnExpert2} className="section3-images__expert2" />
+          </div>
+        </div>
+
+        {/* Section 4 ---> Counter up */}
+        <div className="homePage_section4--wrapper">
+          <div className="section-4__counterUp">
+            <div className="circle-container">
+              <CircleSvgComponent
+                className="section4-circle-svg"
+                trigger={triggerSVG ? "trigerred" : null}
+              />
+
+              {/* <div className="circle-container-separator"></div>
+
+              <Circle className="section4-circle-svg" /> */}
+            </div>
+            HELLO
+            <CountUp start={triggerSVG ? 0 : null} end={100} duration={5} />
+          </div>
+          <div>
+            <h1>
+              TURN YOUR PROJECT FROM MEDIOCRE TO REMARKABLE – DESIGN THAT IS
+              SIMPLE, SEAMLESS AND ALIVE! WITH WEBDEVELOPCORP, YOUR OUTSTANDING
+              WEB PRESENCE IS JUST ONE STEP AWAY. CREATE WITH IT WHAT YOU WILL
+            </h1>
+            <h4>MADHUR JAIN</h4>
+            <h5>FOUNDER</h5>
           </div>
         </div>
       </Layout>
