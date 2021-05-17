@@ -8,6 +8,7 @@
   margin: 0%;
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
 .random-shape-animation {
   position: absolute;
@@ -20,6 +21,7 @@
   bottom: 5%;
   left: 15%;
   transition: 100ms ease-in;
+  z-index: 10;
 }
 .section1--navbar {
   width: 100%;
@@ -379,7 +381,7 @@
   color: var(--lightPink);
   font-weight: bold;
 }
-
+random-shape-animation-2
 /* Section 5 CSS starts here */
 .homePage_section5--wrapper {
   display: grid;
@@ -389,6 +391,7 @@
   width: 100vw;
   gap: 0px;
   margin: 80px 0px;
+  overflow-x: hidden;
 }
 .homePage_section5--wrapper img {
   width: 100%;

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Layout from "../../Components/Layout/Layout";
 
 import { Link } from "react-router-dom";
@@ -49,28 +49,43 @@ import {
 
 function HomePage({ history }) {
   //useStaet constants
-  const [scroll, setSCroll] = useState(null);
   const [triggerSVG, setTriggerSVG] = useState(false);
-
   const [faqHidden1, setFaqHiden1] = useState(false);
   const [faqHidden2, setFaqHiden2] = useState(false);
   const [faqHidden3, setFaqHiden3] = useState(false);
   const [faqHidden4, setFaqHiden4] = useState(false);
+  const [scrollable, setScrollable] = useState(null);
+
+  let lastKnownScrollPosition = 0;
+  let ticking = false;
+
+  function doSomething(scrollPos) {
+    // Do something with the scroll position
+    console.log(scrollPos);
+  }
+
+  document.addEventListener("scroll", function (e) {
+    lastKnownScrollPosition = window.scrollY;
+
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        doSomething(lastKnownScrollPosition);
+        ticking = false;
+      });
+
+      ticking = true;
+    }
+  });
 
   //useEffect to get the DOM elements and trigger observer
   useEffect(() => {
-    //Firing a document scroll event to capture scroll
-    document.addEventListener("scroll", () => {
-      setSCroll(window.pageYOffset);
-    });
+    // window.addEventListener("scroll", () => handleScroll());
 
     //Getting DOM elements for observation
     const section2DOM = document.querySelectorAll(
       ".section2-content__component"
     );
-
     const circleSVG = document.querySelector(".section4-circle-svg");
-
     //Defining observers along with callbacks and options
     let observer = new IntersectionObserver(
       (entries) => {
@@ -89,7 +104,6 @@ function HomePage({ history }) {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          console.log(entry);
           setTriggerSVG(true);
           observer2.unobserve(entry.target);
         }
@@ -110,10 +124,10 @@ function HomePage({ history }) {
       });
 
       observer2.unobserve(circleSVG);
-      document.removeEventListener("scroll", () => setSCroll(null));
+      // window.removeEventListener("scroll", () => handleScroll());
     };
   }, []);
-
+  // console.log("scrollable", scrollable);
   return (
     <>
       <Layout>
@@ -124,13 +138,13 @@ function HomePage({ history }) {
               src={ps1}
               alt=""
               className="random-shape-animation"
-              style={{ transform: `rotateY(${scroll * 1}deg)` }}
+              style={{ transform: `rotateY(${scrollable * 1}deg)` }}
             />
             <img
               src={ps3}
               alt=""
               className="random-shape-animation-2"
-              style={{ transform: `translateX(${scroll * 1}px)` }}
+              style={{ transform: `translateX(${scrollable * 0.35}px)` }}
             />
             <div className="section1--navbar">
               <Link to="/services/websites">Web sites</Link>
