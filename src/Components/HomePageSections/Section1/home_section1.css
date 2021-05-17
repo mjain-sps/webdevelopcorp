@@ -10,43 +10,53 @@
   position: relative;
   overflow: hidden;
 }
-.section1--bgImage,
-.section1--bgImage--frame-1,
-.section1--bgImage--frame-2 {
-  height: 500px;
-  width: 600px;
-}
-.section1--bgImage {
+
+.section1--bg-images__container {
   position: absolute;
   right: 10%;
   z-index: 5;
   top: 0px;
   bottom: 0px;
   margin: auto 0px;
-  background: url("../../assets/img/slider/Amazing-web-development-company.png");
+  height: 500px;
+  width: 600px;
+}
+.section1--bgImage {
+  background: url("../../../assets/img/slider/Amazing-web-development-company.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
 }
 .section1--bgImage--frame-1 {
-  position: absolute;
-  top: 12%;
-  right: 6%;
-  z-index: 4;
-  background: url("../../assets/img/shape/sc1.png");
+  background: url("../../../assets/img/shape/sc1.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transform: translateX(20px);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
 }
 .section1--bgImage--frame-2 {
-  position: absolute;
-  top: 12%;
-  right: 8%;
-  z-index: 4;
-  background: url("../../assets/img/shape/sc2.png");
+  background: url("../../../assets/img/shape/sc2.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transform: translateX(10px);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
 }
 .section1--bgImage2 {
   height: 300px;
@@ -55,7 +65,7 @@
   left: 0%;
   bottom: 0%;
   z-index: 0;
-  background: url("../../assets/img/shape/s-shape2.png");
+  background: url("../../../assets/img/shape/s-shape2.png");
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -109,6 +119,7 @@
   color: white;
   margin: 0px 20px;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 .section1--tagLine {
   color: white;
@@ -161,21 +172,13 @@
     height: 550px;
     margin-top: 0px;
   }
-  .section1--bgImage,
-  .section1--bgImage--frame-1,
-  .section1--bgImage--frame-2 {
-    height: 400px;
-    width: 500px;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-  }
-  .section1--bgImage {
-    top: 600px;
-  }
-  .section1--bgImage--frame-1,
-  .section1--bgImage--frame-2 {
-    top: 610px;
+  .section1--bg-images__container {
+    right: 0%;
+    left: 0%;
+    top: 400px;
+    margin: auto auto;
+    height: 600px;
+    width: 700px;
   }
 }
 @media (max-width: 992px) {
@@ -187,15 +190,28 @@
     font-size: 3.5rem;
     line-height: 4rem;
   }
+  .section1--navbar a {
+    font-size: 1rem;
+    z-index: 10;
+  }
+  .random-shape-animation-3 {
+    right: 10%;
+  }
 }
 @media (max-width: 768px) {
   /* Section 1CSS */
+  .homePage_section1--wrapper {
+    height: 100vh;
+  }
   .homePage-section1--content {
     width: 85%;
   }
 
   .section1--navbar {
     margin: 20px 10px;
+  }
+  .section1--tagLine {
+    height: auto;
   }
 
   .section1--tagLine h1 {
@@ -206,21 +222,57 @@
   .section1--navbar a {
     margin: 0px 8px;
   }
-  .section1--image__bgImage {
-    height: 300px;
-  }
-  .section1--image__actualImage {
+  .section1--bg-images__container {
+    bottom: 0px;
     height: 400px;
+    width: 500px;
   }
 }
 @media (max-width: 576px) {
+  .homePage-section1--content {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+  }
+  .section1-leftSection {
+    justify-content: flex-start;
+  }
+
   .section1--tagLine h1 {
     font-size: 2.5rem;
     line-height: 3rem;
     width: 100%;
   }
+  .section1--navbar a {
+    font-size: 0.9rem;
+  }
+  .random-shape-animation {
+    display: none;
+  }
+  .random-shape-animation-3 {
+    display: none;
+  }
+  .section1--bg-images__container {
+    bottom: 15%;
+    height: 400px;
+    width: 500px;
+  }
 }
-
+@media (min-width: 375px) and (max-width: 499px) {
+  .homePage_section1--wrapper {
+    height: 70vh;
+  }
+  .section1--bg-images__container {
+    bottom: 0px;
+    height: 274px;
+    width: 374px;
+  }
+}
+/* @media (max-width: 380px) {
+  .section1--navbar a {
+    font-size: 0.9rem;
+  }
+} */
 @keyframes taglineAnimation {
   0% {
     transform: translateY(50px);

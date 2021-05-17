@@ -73,7 +73,7 @@
   line-height: 3rem;
   width: 100%;
   text-align: left;
-  min-width: 500px;
+  /* min-width: 500px; */
 }
 .section-4__founderMessage h4 {
   font-weight: bold;
@@ -114,6 +114,7 @@
   .section-4__founderMessage h4,
   .section-4__founderMessage h5 {
     padding: 0px 10px;
+    width: 90vw;
   }
 }
 @media (max-width: 576px) {

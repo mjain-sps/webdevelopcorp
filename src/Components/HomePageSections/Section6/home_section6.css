@@ -24,7 +24,7 @@
 .faq-questions__div {
   width: 530px;
   min-height: 350px;
-  background: url("../../assets/img/misc/fqbg.jpg");
+  background: url("../../../assets/img/misc/fqbg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -63,4 +63,29 @@
 }
 .show_hidden-faq-desscription {
   max-height: 100px;
+}
+
+@media (max-width: 768px) {
+  .section6_content {
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .section6-content__leftsection,
+  .section6-content__rightsection {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+  }
+  .faq-questions__div {
+    width: 100%;
+    min-height: 350px;
+  }
+  .faq-questions__actual-question-div {
+    height: 70px;
+    width: 100%;
+  }
 }
