@@ -10,7 +10,13 @@ import CountUp from "react-countup";
 import CustomButton from "../../Components/CustomButton/CustomButton";
 
 // Importing CSS
-import "./homePage.css";
+
+import "./home_section1.css";
+import "./home_section2.css";
+import "./home_section3.css";
+import "./home_section4.css";
+import "./home_section5.css";
+import "./home_section6.css";
 
 // Importing Images
 import sShape2 from "../../assets/img/shape/s-shape2.png";
@@ -34,6 +40,7 @@ import frequentlyAskedQuestionsWebdevelopcorp from "../../assets/img/misc/Freque
 //Shapes for Animatio
 import ps1 from "../../assets/img/shape/ps1.png";
 import ps3 from "../../assets/img/shape/ps3.png";
+import ps2 from "../../assets/img/shape/ps2.png";
 
 // import SVG
 import CircleSvgComponent from "../../assets/Test/CircleSvgComponent";
@@ -56,77 +63,61 @@ function HomePage({ history }) {
   const [faqHidden4, setFaqHiden4] = useState(false);
   const [scrollable, setScrollable] = useState(null);
 
-  let lastKnownScrollPosition = 0;
-  let ticking = false;
-
-  function doSomething(scrollPos) {
-    // Do something with the scroll position
-    console.log(scrollPos);
-  }
-
-  document.addEventListener("scroll", function (e) {
-    lastKnownScrollPosition = window.scrollY;
-
-    if (!ticking) {
-      window.requestAnimationFrame(function () {
-        doSomething(lastKnownScrollPosition);
-        ticking = false;
-      });
-
-      ticking = true;
-    }
-  });
+  //HandleSCroll function
+  // const handleScroll = () => {
+  //   setScrollable(window.pageYOffset);
+  // };
 
   //useEffect to get the DOM elements and trigger observer
-  useEffect(() => {
-    // window.addEventListener("scroll", () => handleScroll());
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => handleScroll());
 
-    //Getting DOM elements for observation
-    const section2DOM = document.querySelectorAll(
-      ".section2-content__component"
-    );
-    const circleSVG = document.querySelector(".section4-circle-svg");
-    //Defining observers along with callbacks and options
-    let observer = new IntersectionObserver(
-      (entries) => {
-        const [entry1, entry2] = entries;
-        if (entry1.isIntersecting || entry2.isIntersecting) {
-          entry1.target.classList.add("bring-to-normal-transform");
-          entry2.target.classList.add("bring-to-normal-transform");
-          observer.unobserve(entry1.target);
-          observer.unobserve(entry2.target);
-        }
-      },
-      { root: null, threshold: [0] }
-    );
-    //2nd Observer for counter up SVG
-    let observer2 = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          setTriggerSVG(true);
-          observer2.unobserve(entry.target);
-        }
-      },
-      { root: null, threshold: [0.9] }
-    );
+  //   //Getting DOM elements for observation
+  //   const section2DOM = document.querySelectorAll(
+  //     ".section2-content__component"
+  //   );
+  //   const circleSVG = document.querySelector(".section4-circle-svg");
+  //   //Defining observers along with callbacks and options
+  //   let observer = new IntersectionObserver(
+  //     (entries) => {
+  //       const [entry1, entry2] = entries;
+  //       if (entry1.isIntersecting || entry2.isIntersecting) {
+  //         entry1.target.classList.add("bring-to-normal-transform");
+  //         entry2.target.classList.add("bring-to-normal-transform");
+  //         observer.unobserve(entry1.target);
+  //         observer.unobserve(entry2.target);
+  //       }
+  //     },
+  //     { root: null, threshold: [0] }
+  //   );
+  //   //2nd Observer for counter up SVG
+  //   let observer2 = new IntersectionObserver(
+  //     (entries) => {
+  //       const [entry] = entries;
+  //       if (entry.isIntersecting) {
+  //         setTriggerSVG(true);
+  //         observer2.unobserve(entry.target);
+  //       }
+  //     },
+  //     { root: null, threshold: [0.9] }
+  //   );
 
-    //Initializing observations
-    section2DOM.forEach((section) => {
-      observer.observe(section);
-    });
-    observer2.observe(circleSVG);
+  //   //Initializing observations
+  //   section2DOM.forEach((section) => {
+  //     observer.observe(section);
+  //   });
+  //   observer2.observe(circleSVG);
 
-    // Component did unmount
-    return () => {
-      section2DOM.forEach((section) => {
-        observer.unobserve(section);
-      });
+  //   // Component did unmount
+  //   return () => {
+  //     section2DOM.forEach((section) => {
+  //       observer.unobserve(section);
+  //     });
 
-      observer2.unobserve(circleSVG);
-      // window.removeEventListener("scroll", () => handleScroll());
-    };
-  }, []);
+  //     observer2.unobserve(circleSVG);
+  //     window.removeEventListener("scroll", () => handleScroll());
+  //   };
+  // }, []);
   // console.log("scrollable", scrollable);
   return (
     <>
@@ -140,47 +131,62 @@ function HomePage({ history }) {
               className="random-shape-animation"
               style={{ transform: `rotateY(${scrollable * 1}deg)` }}
             />
+
             <img
               src={ps3}
               alt=""
               className="random-shape-animation-2"
-              style={{ transform: `translateX(${scrollable * 0.35}px)` }}
+              style={{ transform: `translateX(${scrollable * 0.5}px)` }}
             />
-            <div className="section1--navbar">
-              <Link to="/services/websites">Web sites</Link>
-              <Link to="/services/websites">Enterprise Solutions</Link>
-              <Link to="/services/websites">Web Apps</Link>
-              <Link to="/services/websites">Mobile Apps</Link>
-            </div>
+            <img
+              src={ps2}
+              alt=""
+              className="random-shape-animation-3"
+              style={{ transform: `rotateY(${scrollable * -3}deg)` }}
+            />
+            <div className="section1--bgImage"></div>
+            <div className="section1--bgImage--frame-1"></div>
+            <div className="section1--bgImage--frame-2"></div>
 
-            <div className="section1--tagLine">
-              <h1>
-                YOU ARE ONE MINUTE AWAY FROM ROCKET LAUNCHING YOUR BUSINESS
-              </h1>
-            </div>
-
-            <div className="section1--CTA">
-              <CustomButton
-                type="button"
-                onClick={() => history.push("/services")}
-              >
-                LEARN MORE
-              </CustomButton>
-              <CustomButton
-                type="button"
-                onClick={() => history.push("/services")}
-              >
-                GET QUOTE
-              </CustomButton>
-            </div>
-
-            <div className="section1--image">
+            <div className="section1--bgImage2"></div>
+            {/* <div className="section1--image">
               <img src={sShape2} alt="" className="section1--image__bgImage" />
               <img
                 src={AmazingWebDevelopCompany}
                 className="section1--image__actualImage"
                 alt=""
               />
+            </div> */}
+            <div className="homePage-section1--content">
+              <div className="section1-leftSection">
+                <div className="section1--navbar">
+                  <Link to="/services/websites">Web sites</Link>
+                  <Link to="/services/websites">Enterprise Solutions</Link>
+                  <Link to="/services/websites">Web Apps</Link>
+                  <Link to="/services/websites">Mobile Apps</Link>
+                </div>
+
+                <div className="section1--tagLine">
+                  <h1>
+                    YOU ARE ONE MINUTE AWAY FROM ROCKET LAUNCHING YOUR BUSINESS
+                  </h1>
+                </div>
+
+                <div className="section1--CTA">
+                  <CustomButton
+                    type="button"
+                    onClick={() => history.push("/services")}
+                  >
+                    LEARN MORE
+                  </CustomButton>
+                  <CustomButton
+                    type="button"
+                    onClick={() => history.push("/services")}
+                  >
+                    GET QUOTE
+                  </CustomButton>
+                </div>
+              </div>
             </div>
           </div>
         </div>

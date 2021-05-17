@@ -1,6 +1,5 @@
 .customButton--wrapper {
-  max-width: 190px;
-  min-width: 150px;
+  width: 150px;
   background-color: var(--whiteSmoke);
   height: 60px;
   border: none;

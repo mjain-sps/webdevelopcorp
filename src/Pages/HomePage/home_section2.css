@@ -1,0 +1,170 @@
+/* SECTION 2 CSS STARTS HERE */
+.homePage_section2--wrapper {
+  width: 100%;
+  background-color: var(--whiteSmoke);
+  margin: 20px 0px;
+  padding: 20px 0px 0px 0px;
+}
+.section-2_features--wrapper {
+  display: flex;
+  width: 85%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px auto;
+}
+.section2-content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  column-gap: 50px;
+  row-gap: 40px;
+  width: 800px;
+  margin: 0px 60px 20px 0px;
+}
+.section2-content__component {
+  padding: 15px;
+  transform: translateY(100px);
+  transition: 500ms ease-in;
+}
+.bring-to-normal-transform {
+  transform: translateY(0px);
+}
+.bg-white {
+  background-color: white;
+}
+.section2-content__component-header {
+  display: flex;
+  justify-content: flex-start;
+}
+.content__component-logo {
+  width: 40px;
+  height: 40px;
+  background-color: var(--lightPink);
+  position: relative;
+}
+.content__component-logo > .svg-inline--fa {
+  position: absolute;
+  font-size: 30px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  left: 5px;
+  margin: 0%;
+  padding: 0%;
+}
+.content__component-heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+.section2-content__component > p {
+  font-size: 1rem;
+  color: var(--lightGray);
+  font-family: var(--crimsonFont);
+  text-align: justify;
+}
+
+.section2-coreFeatures {
+  margin: 0px 0px 0px 60px;
+  width: 400px;
+  position: relative;
+  height: 440px;
+  padding: 40px 10px;
+}
+.section2-coreFeatures > h2 {
+  text-align: left;
+  position: absolute;
+  top: 8%;
+  left: 0%;
+  font-weight: bold;
+  font-family: var(--crimsonFont);
+}
+.section2-coreFeatures > h1 {
+  text-align: left;
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  font-weight: bold;
+}
+.section2-coreFeatures-separator {
+  height: 3px;
+  width: 60%;
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  background-color: var(--lightPink);
+}
+.section2-coreFeatures > button {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  background-color: white;
+  width: 200px;
+}
+.section2-coreFeatures > button .custom-button_matter {
+  font-size: 1.2rem;
+}
+.section-2--image {
+  width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  /* Section 2 CSS */
+  .section-2_features--wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+  }
+  .section2-content {
+    margin: 0;
+    padding: 15px;
+    row-gap: 15px;
+  }
+
+  .section2-coreFeatures {
+    width: 400px;
+    position: relative;
+    height: 250px;
+    padding: 10px;
+  }
+  .section2-content__component {
+    background-color: white;
+  }
+
+  /* Section 5 CSS */
+  .homePage_section5--wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100vw;
+    gap: 0px;
+    transition: 500ms ease-in;
+  }
+  .restaurantApp-rowspan {
+    grid-row: 1/3;
+  }
+  .furnitureEcommerce-col-span {
+    grid-column: 1/1;
+    grid-row: 2/2;
+  }
+  .fashionClothing-col-span {
+    grid-column: 2/2;
+  }
+}
+
+@media (max-width: 576px) {
+  .section2-content {
+    padding: 15px;
+    grid-template-columns: 1fr;
+  }
+
+  /* Section 3 CSS */
+
+  .section3-content__ourmission {
+    grid-template-columns: 1fr;
+  }
+}
