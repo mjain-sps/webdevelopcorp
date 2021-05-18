@@ -134,8 +134,8 @@
 }
 @media (max-width: 420px) {
   .aboutPage_section1--wrapper {
-    min-height: 900px;
-    justify-content: center;
+    height: 1450px;
+    display: block;
   }
   .about-section1--left {
     height: 700px;

@@ -6,6 +6,8 @@ import oneStopVendor from "../../../assets/img/misc/One-stop-vendor-webdevelopme
 import personalApproach from "../../../assets/img/misc/Personal-approach-webdevelopment-solutions.jpg";
 import exceptionalQuality from "../../../assets/img/misc/five-star-quality-web-development-solutions.jpg";
 import completeTransparency from "../../../assets/img/misc/transparent-approach-about-us-webdevelopmentcorp.jpg";
+//import linear animation component
+import LinearCounterUp from "../../LinearCounterUp/LinearCounterUp";
 function AboutSection2() {
   return (
     <div className="about-section2--wrapper">
@@ -49,6 +51,15 @@ function AboutSection2() {
             providing sound advice on technology and application design options
           </p>
         </div>
+      </div>
+      {/* Linear Animation */}
+      <div className="section2-linear_animation--wrapper">
+        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
+        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
+        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
+        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
+        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
+        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
       </div>
     </div>
   );

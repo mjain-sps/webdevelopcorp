@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 95%;
-  height: 600px;
+  height: 650px;
   margin: auto;
   border: 1px solid rgba(125, 125, 125, 0.6);
 }
@@ -26,9 +26,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 95%;
+  height: 96%;
   width: 22%;
-  border: 1px solid white;
 }
 .OurStrengths__tile--div:hover {
   background-color: white;
@@ -45,16 +44,23 @@
 .OurStrengths__tile--div img {
   width: 100%;
   object-fit: contain;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 .OurStrengths__tile--div p {
   padding: 15px;
   color: var(--lightGray);
-  font-size: 1.2rem;
-  text-align: justify;
+  font-size: 1.3rem;
+  text-align: left;
   font-family: var(--crimsonFont);
 }
 
+.section2-linear_animation--wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: auto;
+  height: 400px;
+}
 @media (max-width: 992px) {
   .about-section2--wrapper {
     height: 3000px;
@@ -82,16 +88,29 @@
 
 @media (max-width: 576px) {
   .section-2-ourStrengths--header {
-    height: 50px;
+    height: 100px;
     font-size: 3rem;
   }
   .section-2-ourStrengths--tiles {
     width: 100%;
-    height: 1200px;
-    border: none;
+    height: 2000px;
   }
   .OurStrengths__tile--div {
-    width: 100%;
-    height: 25%;
+    width: 500px;
+    height: 500px;
+  }
+  .OurStrengths__tile--div h4 {
+    font-size: 1.4rem;
+    margin: 10px 0px;
+  }
+  .OurStrengths__tile--div img {
+    width: 70%;
+    object-fit: contain;
+    margin: 10px 0px;
+  }
+}
+@media (min-width: 320px) and (max-width: 400px) {
+  .section-2-ourStrengths--header {
+    font-size: 2.5rem;
   }
 }
