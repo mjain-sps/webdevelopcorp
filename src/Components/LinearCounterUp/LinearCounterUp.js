@@ -1,6 +1,8 @@
 import React from "react";
 import "./LinearCounterUp.css";
-function LinearCounterUp({ title, percent }) {
+
+import LinearStyledComponent from "../StyledComponents/LinearAnimator";
+function LinearCounterUp({ title, percent, linearTrigger }) {
   return (
     <div className="linear-counterUp--wrapper">
       <div className="linear--title">
@@ -8,14 +10,7 @@ function LinearCounterUp({ title, percent }) {
         <span>{percent} %</span>
       </div>
       <div className="linear-100__scale"></div>
-      <div
-        className="linear-actual__scale"
-        style={{
-          height: "3px",
-          width: `${percent}%`,
-          background: "var(--orange)",
-        }}
-      ></div>
+      <LinearStyledComponent linearTrigger={linearTrigger} percent={percent} />
     </div>
   );
 }

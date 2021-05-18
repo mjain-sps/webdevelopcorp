@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //Import CSS
 import "./AboutSection2.css";
 //Importing images for Tiles
@@ -9,6 +9,33 @@ import completeTransparency from "../../../assets/img/misc/transparent-approach-
 //import linear animation component
 import LinearCounterUp from "../../LinearCounterUp/LinearCounterUp";
 function AboutSection2() {
+  //Define States
+  const [linerTrigger, setLinearTrigger] = useState(false);
+
+  useEffect(() => {
+    const linearAnimationDOM = document.querySelector(
+      ".section2-linear_animation--wrapper"
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setLinearTrigger(true);
+          entry.target.classList.add("show_linear-100__scale");
+          observer.unobserve(entry.target);
+        }
+      },
+      { root: null, threshold: [1] }
+    );
+
+    observer.observe(linearAnimationDOM);
+
+    return () => {
+      observer.unobserve(linearAnimationDOM);
+    };
+  }, []);
+
   return (
     <div className="about-section2--wrapper">
       <div className="section-2-ourStrengths--header">OUR STRENGTHS</div>
@@ -54,12 +81,36 @@ function AboutSection2() {
       </div>
       {/* Linear Animation */}
       <div className="section2-linear_animation--wrapper">
-        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
-        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
-        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
-        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
-        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
-        <LinearCounterUp title="WEBSITE DEVELOPMENT" percent="92" />
+        <LinearCounterUp
+          title="WEBSITE DEVELOPMENT"
+          percent="92"
+          linearTrigger={linerTrigger}
+        />
+        <LinearCounterUp
+          title="ENTERPRISE SOFTWARE DEVELOPMENT"
+          percent="90"
+          linearTrigger={linerTrigger}
+        />
+        <LinearCounterUp
+          title="MOBILE APP DEVELOPMENT"
+          percent="93"
+          linearTrigger={linerTrigger}
+        />
+        <LinearCounterUp
+          title="APPLICATION INTEGRATION"
+          percent="95"
+          linearTrigger={linerTrigger}
+        />
+        <LinearCounterUp
+          title="GRAPHIC DESIGN"
+          percent="98"
+          linearTrigger={linerTrigger}
+        />
+        <LinearCounterUp
+          title="DIGITAL MARKETING"
+          percent="90"
+          linearTrigger={linerTrigger}
+        />
       </div>
     </div>
   );

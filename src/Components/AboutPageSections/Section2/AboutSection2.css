@@ -55,10 +55,10 @@
 }
 
 .section2-linear_animation--wrapper {
+  margin: 60px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 90%;
-  margin: auto;
   height: 400px;
 }
 @media (max-width: 992px) {
@@ -84,6 +84,15 @@
   .OurStrengths__tile--div {
     width: 48%;
   }
+  .section2-linear_animation--wrapper {
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 30px);
+    row-gap: 30px;
+    width: 80%;
+    height: 400px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -107,6 +116,10 @@
     width: 70%;
     object-fit: contain;
     margin: 10px 0px;
+  }
+  .section2-linear_animation--wrapper {
+    width: 95%;
+    height: 400px;
   }
 }
 @media (min-width: 320px) and (max-width: 400px) {

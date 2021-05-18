@@ -5,7 +5,7 @@ import "./AboutPage.css";
 //importing Various Sections
 import AboutSection1 from "../../Components/AboutPageSections/Section1/AboutSection1";
 import AboutSection2 from "../../Components/AboutPageSections/Section2/AboutSection2";
-
+import GetInTouch from "../../Components/GetInTouch/GetInTouch";
 import aboutPageBG from "../../assets/img/banner/about-us.jpg";
 function AboutPage() {
   return (
@@ -15,6 +15,8 @@ function AboutPage() {
       <AboutSection1 />
       {/* Section2 */}
       <AboutSection2 />
+      {/* Get In Touch Componetn */}
+      <GetInTouch />
     </div>
   );
 }
