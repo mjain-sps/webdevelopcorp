@@ -121,6 +121,11 @@
   text-decoration: none;
   font-size: 1.2rem;
 }
+.section1--navbar__separator {
+  width: 1px;
+  height: 1rem;
+  background-color: white;
+}
 .section1--tagLine {
   color: white;
   padding: 0 20px;
@@ -286,6 +291,12 @@
   }
   .section1--navbar a {
     font-size: 0.8rem;
+  }
+  .section1--CTA button {
+    width: 150px;
+  }
+  .section1--CTA button .custom-button_matter {
+    font-size: 0.7rem;
   }
 }
 /* @media (max-width: 380px) {

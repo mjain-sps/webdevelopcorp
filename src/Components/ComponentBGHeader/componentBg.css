@@ -1,0 +1,45 @@
+.bgHeader--wrapper {
+  height: 90vh;
+  width: 100vw;
+  margin: 0%;
+  padding: 0%;
+  position: relative;
+}
+.bgHeader--title {
+  font-size: 6rem;
+  color: white;
+  position: absolute;
+  top: 30vh;
+  left: 5%;
+}
+@media (max-width: 992px) {
+  .bgHeader--title {
+    font-size: 5rem;
+    top: 35vh;
+  }
+}
+@media (max-width: 768px) {
+  .bgHeader--wrapper {
+    height: 60vh;
+    width: 100vw;
+    margin: 0%;
+    padding: 0%;
+  }
+  .bgHeader--title {
+    font-size: 4rem;
+    color: white;
+    top: 15vh;
+  }
+}
+@media (max-width: 576px) {
+  .bgHeader--wrapper {
+    height: 50vh;
+    width: 100vw;
+    margin: 0%;
+    padding: 0%;
+  }
+  .bgHeader--title {
+    font-size: 3rem;
+    top: 10vh;
+  }
+}

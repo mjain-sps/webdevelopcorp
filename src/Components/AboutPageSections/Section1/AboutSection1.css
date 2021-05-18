@@ -1,0 +1,146 @@
+.aboutPage_section1--wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  min-height: 800px;
+  justify-content: center;
+  align-items: center;
+}
+.about-section1--left,
+.about-section1--right {
+  width: 48%;
+  height: 600px;
+  margin: 0 1%;
+}
+.about-section1--left {
+  position: relative;
+}
+.about-leftSection--topImage {
+  position: absolute;
+  width: 75%;
+  height: 60%;
+  top: 0%;
+  left: 0%;
+  z-index: 0;
+}
+.about-leftSection--bottomImage {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  bottom: 0%;
+  right: 0%;
+  z-index: 1;
+  overflow: hidden;
+}
+.about-section1--left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.about-section1--right h3 {
+  font-size: 4rem;
+  font-family: var(--crimsonFont);
+}
+.about-section1--right h1 {
+  font-size: 5rem;
+  line-height: 6rem;
+  margin: 10px 0px;
+}
+
+.about-section1--right p {
+  font-size: 1.5rem;
+  color: var(--lightGray);
+  font-family: var(--crimsonFont);
+}
+
+@media (max-width: 1200px) {
+  .about-section1--left,
+  .about-section1--right {
+    height: 400px;
+  }
+  .about-section1--right h3 {
+    font-size: 3rem;
+  }
+  .about-section1--right h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .about-section1--right p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-section1--right h3 {
+    font-size: 2.5rem;
+  }
+  .about-section1--right h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .about-section1--right p {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-section1--left {
+    width: 100vw;
+    height: 900px;
+  }
+  .about-section1--right {
+    padding: 10px 20px;
+    height: 600px;
+    width: 100%;
+  }
+
+  .about-section1--left img {
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutPage_section1--wrapper {
+    min-height: 600px;
+    justify-content: center;
+  }
+  .about-section1--left,
+  .about-section1--right {
+    display: flex;
+    flex-wrap: wrap;
+    position: static;
+    width: 100vw;
+    height: 1000px;
+  }
+  .about-section1--right {
+    height: 600px;
+  }
+  .about-leftSection--topImage {
+    width: 100%;
+    height: 50%;
+    position: static;
+  }
+  .about-leftSection--bottomImage {
+    width: 100%;
+    height: 50%;
+    position: static;
+  }
+  .about-section1--left img {
+    object-fit: cover;
+  }
+}
+@media (max-width: 420px) {
+  .about-section1--left {
+    height: 700px;
+  }
+  .about-section1--right {
+    height: 600px;
+  }
+  .about-section1--right h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+}

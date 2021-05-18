@@ -35,10 +35,6 @@
     width: 100vw;
     gap: 0px;
     transition: 500ms ease-in;
-    border: 1px solid red;
-  }
-  .homePage_section5--wrapper img {
-    border: 1px solid black;
   }
   .restaurantApp-rowspan {
     grid-row: 1/3;
@@ -54,6 +50,7 @@
 @media (max-width: 576px) {
   .homePage_section5--wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     width: 100vw;
     padding: 5px;

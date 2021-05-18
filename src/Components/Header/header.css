@@ -1,10 +1,10 @@
 .header-wrapper {
   width: 100%;
   height: 140px;
-  position: absolute;
+  position: fixed;
   top: 0%;
   left: 0%;
-  z-index: 5;
+  z-index: 15;
 }
 
 /* Company Info CSS */
@@ -96,12 +96,14 @@
 .toggleHeader--wrapper {
   position: absolute;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 15;
   top: 0%;
   left: 0%;
   width: 100vw;
 }
+/* This toggler will get activated only when screen size is above 768px */
+
 .toggleHeader-content {
   position: absolute;
   top: 0%;
@@ -114,6 +116,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 0px 20px;
+  z-index: 20;
 }
 
 .toggleHeader-content__close {
@@ -138,20 +141,70 @@
   font-size: 14px;
   font-family: "Oswald", sans-serif;
 }
+.toggle_header--md__wrapper {
+  display: none;
+}
 @media (max-width: 768px) {
   .header-navItems {
     display: none;
   }
   .toggleHeader-content {
+    display: none;
+  }
+  .toggle_header--md__wrapper {
+    position: absolute;
+    display: block;
     width: 50vw;
+    height: 100vh;
+    top: 0%;
+    right: 0%;
+    background-color: var(--backgroundBlack);
+    padding: 0px 15px;
+    z-index: 20;
+  }
+  .toggle_header--md--title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+    padding: 10px;
+    width: 100%;
+  }
+  .toggle_header--md--title h1 {
+    font-size: 1.5rem;
+    color: white;
+  }
+  .toggle_header--md--navItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .toggle_header--md--navItems a {
+    font-size: 1rem;
+    color: white;
+
+    margin: 20px 0px;
+  }
+  .toggle_header--md--navItems a:hover {
+    color: white;
+    cursor: pointer;
   }
   .header-companyinfo--address {
     display: none;
   }
+  .toggle-header--navItems_separator {
+    width: 80%;
+    height: 1px;
+    background-color: rgba(125, 125, 125, 0.6);
+    margin: 5px 0px;
+  }
 }
 
-@media (min-width: 768px) and(max-width: 992px) {
-  .toggleHeader-content {
-    width: 40vw;
+@media (max-width: 576px) {
+  .toggle_header--md__wrapper {
+    width: 100vw;
+    padding: 0px 20px;
   }
 }

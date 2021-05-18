@@ -5,6 +5,11 @@ import frequentlyAskedQuestionsWebdevelopcorp from "../../../assets/img/misc/Fre
 
 //Importing CSS
 import "./home_section6.css";
+//Importing Answers data
+import { ANSWERS } from "./Data";
+
+//imporitng Collapsible Component
+import Collapsible from "./Collapsible";
 function Section6() {
   return (
     <div className="homePage_section6--wrapper">
@@ -12,28 +17,10 @@ function Section6() {
         <div className="section6-content__leftsection">
           <img src={frequentlyAskedQuestionsWebdevelopcorp} alt="" />
         </div>
-
         <div className="section6-content__rightsection">
           <h3>FAQ</h3>
           <h1>GET YOUR ANSWERS</h1>
-          <div className="faq-questions__div">
-            <div>
-              <div className="faq-questions__actual-question-div">
-                <span className="faq__actual-question">
-                  HOW CAN I SETUP MY THEME?
-                </span>
-                <span>+</span>
-              </div>
-              <span>
-                Its easy and fast. Once you tell us your requirements, our
-                design team will get in touch with you and will show you
-                hundreds of themes that match your taste. You may select one of
-                them and we will show you how your web page will look like. Of
-                course you can always modify the theme as per your own
-                requirements.
-              </span>
-            </div>
-          </div>
+          <Collapsible answers={ANSWERS} />
         </div>
       </div>
     </div>

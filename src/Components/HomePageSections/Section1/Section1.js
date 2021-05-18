@@ -37,20 +37,18 @@ function Section1({ scrollable, history }) {
         </div>
 
         <div className="section1--bgImage2"></div>
-        {/* <div className="section1--image">
-              <img src={sShape2} alt="" className="section1--image__bgImage" />
-              <img
-                src={AmazingWebDevelopCompany}
-                className="section1--image__actualImage"
-                alt=""
-              />
-            </div> */}
+
         <div className="homePage-section1--content">
           <div className="section1-leftSection">
             <div className="section1--navbar">
               <Link to="/services/websites">Web sites</Link>
+              <div className="section1--navbar__separator"></div>
               <Link to="/services/websites">Enterprise Solutions</Link>
+              <div className="section1--navbar__separator"></div>
+
               <Link to="/services/websites">Web Apps</Link>
+              <div className="section1--navbar__separator"></div>
+
               <Link to="/services/websites">Mobile Apps</Link>
             </div>
 

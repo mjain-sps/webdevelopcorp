@@ -95,6 +95,30 @@ function Header() {
               </div>
             </div>
           </div>
+
+          {/* This will display when screen size is less than 768 px */}
+          <div className="toggle_header--md__wrapper">
+            <div className="toggle_header--md--title">
+              <h1>WEBDEVELOPCORP</h1>
+              <div
+                className="toggleHeader-content__close"
+                onClick={() => setToggleMenu(false)}
+              >
+                <FontAwesomeIcon icon={faTimes} />
+              </div>
+            </div>
+
+            <div className="toggle_header--md--navItems">
+              <Link to="/">HOME</Link>
+              <div className="toggle-header--navItems_separator"></div>
+              <Link to="/about">ABOUT</Link>
+              <div className="toggle-header--navItems_separator"></div>
+              <Link to="/">SERVICES</Link>
+              <div className="toggle-header--navItems_separator"></div>
+              <Link to="/">CONTACT</Link>
+              <div className="toggle-header--navItems_separator"></div>
+            </div>
+          </div>
         </div>
       ) : null}
     </div>
