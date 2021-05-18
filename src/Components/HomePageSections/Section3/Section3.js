@@ -47,9 +47,9 @@ function Section3() {
               to create a unique recipe of hard earned success.
             </p>
           </div>
-        </div>
 
-        <CustomButton type="button">LEARN MORE</CustomButton>
+          <CustomButton type="button">LEARN MORE</CustomButton>
+        </div>
       </div>
       <div className="section3-images">
         <img

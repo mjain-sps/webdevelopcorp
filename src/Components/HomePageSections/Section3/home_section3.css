@@ -31,7 +31,6 @@
 }
 .section3-content > p {
   margin: 20px 0px;
-
   padding: 0px 10px;
   width: 75%;
   text-align: left;
@@ -135,5 +134,27 @@
   }
   .section3-images__expert2 {
     width: 100%;
+  }
+  .section3-content > h1 {
+    padding: 0px 5px;
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  .section3-content > p {
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+  .section3-content button {
+    width: 70%;
+    height: 50px;
+  }
+  .section3-content button .custom-button_matter {
+    font-size: 1rem;
+  }
+  .section3-content button .custom-button_icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
   }
 }

@@ -124,4 +124,8 @@
   .circle-container-separator {
     display: none;
   }
+  .section-4__founderMessage h1 {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
 }

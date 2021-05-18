@@ -28,10 +28,10 @@ function Section2({ history }) {
       (entries) => {
         const [entry1, entry2] = entries;
         if (entry1.isIntersecting || entry2.isIntersecting) {
-          entry1.target.classList.add("bring-to-normal-transform");
-          entry2.target.classList.add("bring-to-normal-transform");
-          observer.unobserve(entry1.target);
-          observer.unobserve(entry2.target);
+          entry1 && entry1.target.classList.add("bring-to-normal-transform");
+          entry2 && entry2.target.classList.add("bring-to-normal-transform");
+          entry1 && observer.unobserve(entry1.target);
+          entry2 && observer.unobserve(entry2.target);
         }
       },
       { root: null, threshold: [0] }
