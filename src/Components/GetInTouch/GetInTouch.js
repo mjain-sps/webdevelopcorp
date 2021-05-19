@@ -16,35 +16,31 @@ function GetInTouch() {
         <h1>CONTACT US</h1>
         <form>
           <div className="input-div name">
-            <FontAwesomeIcon
-              icon={faUser}
-              style={{ color: "var(--lightPink)", marginRight: "10px" }}
-            />
+            <FontAwesomeIcon icon={faUser} />
             <input type="text" placeholder="ENTER YOUR NAME" />
           </div>
 
           <div className="input-div email">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              style={{ color: "var(--lightPink)", marginRight: "10px" }}
-            />
-            <input type="text" placeholder="ENTER YOUR EMAIL" />
+            <FontAwesomeIcon icon={faEnvelope} />
+            <input type="email" placeholder="ENTER YOUR EMAIL" />
           </div>
 
           <div className="input-div phone">
-            <FontAwesomeIcon
-              icon={faPhoneSquareAlt}
-              style={{ color: "var(--lightPink)", marginRight: "10px" }}
-            />
+            <FontAwesomeIcon icon={faPhoneSquareAlt} />
             <input type="number" placeholder="ENTER YOUR PHONE" />
           </div>
 
-          <div className="input-div name">
-            <FontAwesomeIcon
-              icon={faUser}
-              style={{ color: "var(--lightPink)", marginRight: "10px" }}
+          <div className="text-area-div message">
+            <FontAwesomeIcon icon={faUser} className="message_icon" />
+            <textarea
+              rows="4"
+              placeholder="ENTER MESSAGE"
+              className="message_textarea"
             />
-            <textarea rows="4" />
+          </div>
+
+          <div className="getInTouch--CTA">
+            <CustomButton type="submit">SUBMIT</CustomButton>
           </div>
         </form>
       </div>

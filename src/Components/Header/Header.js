@@ -113,7 +113,7 @@ function Header() {
               <div className="toggle-header--navItems_separator"></div>
               <Link to="/about">ABOUT</Link>
               <div className="toggle-header--navItems_separator"></div>
-              <Link to="/">SERVICES</Link>
+              <Link to="/services">SERVICES</Link>
               <div className="toggle-header--navItems_separator"></div>
               <Link to="/">CONTACT</Link>
               <div className="toggle-header--navItems_separator"></div>
