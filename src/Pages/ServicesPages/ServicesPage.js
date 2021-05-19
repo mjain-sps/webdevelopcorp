@@ -11,7 +11,7 @@ import mobileApplications from "../../assets/img/service/mobile-applications.png
 import CustomButton from "../../Components/CustomButton/CustomButton";
 //Importing Layout
 import Layout from "../../Components/Layout/Layout";
-function ServicesPage() {
+function ServicesPage({ history }) {
   return (
     <Layout>
       <div>
@@ -36,7 +36,12 @@ function ServicesPage() {
                 websites, news websites, business websites and social networking
                 websites.
               </p>
-              <CustomButton type="button">READ MORE..</CustomButton>
+              <CustomButton
+                type="button"
+                onClick={() => history.push("/websites")}
+              >
+                READ MORE..
+              </CustomButton>
             </div>
 
             <div className="servicesPage--gridItem">
@@ -49,7 +54,14 @@ function ServicesPage() {
                 and business type such as salon, restaurants, café, ecommerce,
                 retail, wholesale, manufacturing, etc.
               </p>
-              <CustomButton type="button">READ MORE..</CustomButton>
+              <CustomButton
+                type="button"
+                onClick={() =>
+                  history.push("/web-application-enterprise-solution")
+                }
+              >
+                READ MORE..
+              </CustomButton>
             </div>
 
             <div className="servicesPage--gridItem mobile_applications">

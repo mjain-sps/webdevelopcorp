@@ -1,0 +1,92 @@
+.services-websites__section2 {
+  background-color: var(--backgroundBlack);
+  color: white;
+}
+.services-websites__section2_servicesPage--serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(500px, auto);
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.services-websites__section2_servicesPage--gridItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.services-websites__section2_servicesPage--gridItem:hover {
+  background-color: white;
+  transition: 200ms ease-in;
+}
+
+.services-websites__section2_servicesPage--gridItem img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 300px;
+  margin: 0px;
+}
+.services-websites__section2_servicesPage--gridItem p {
+  color: white;
+  font-family: var(--crimsonFont);
+  padding: 0 5px;
+  font-size: 1.2rem;
+}
+.services-websites__section2_servicesPage--gridItem:hover p {
+  color: black;
+}
+/* Media Queris */
+@media (max-width: 1200px) {
+  .services-websites__section2_servicesPage--serviceGrid {
+    grid-template-rows: minmax(750px, auto);
+    width: 95%;
+  }
+  .services-websites__section2_web img {
+    object-fit: cover;
+  }
+  .services-websites__section2_mobile_applications img {
+    object-fit: cover;
+  }
+  .services-websites__section2_servicesPage--gridItem img {
+    height: 300px;
+  }
+}
+@media (max-width: 992px) {
+  .services-websites__section2_servicesPage--serviceGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(500px, auto));
+  }
+
+  .services-websites__section2_servicesPage--gridItem {
+    width: 60%;
+    margin: 0px auto;
+  }
+
+  .services-websites__section2_servicesPage--gridItem img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-websites__section2_servicesPage--gridItem {
+    width: 90%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .services-websites__section2_servicesPage--serviceGrid {
+    grid-template-rows: repeat(3, minmax(450px, auto));
+  }
+
+  .services-websites__section2_servicesPage--gridItem {
+    width: 100%;
+  }
+  .services-websites__section2_servicesPage--gridItem img {
+    height: 200px;
+  }
+}

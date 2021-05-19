@@ -1,0 +1,21 @@
+.enterprise-sol--wrapper {
+  width: 100vw;
+}
+.enterprise-sol__section1 {
+  width: 85%;
+  margin: auto;
+}
+.enterprise-sol__section1 h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+.enterprise-sol__section1 h4 {
+  margin: 20px 0px;
+}
+.enterprise-sol__section1 p {
+  font-size: 1.2rem;
+  color: var(--lightGray);
+  margin: 20px 0px;
+  font-family: var(--crimsonFont);
+}

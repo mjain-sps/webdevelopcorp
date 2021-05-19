@@ -1,0 +1,130 @@
+.services-websites__section3_servicesPage--serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(850px, auto);
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+}
+
+.services-websites__section3_servicesPage--gridItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.services-websites__section3_servicesPage--gridItem:hover {
+  background-color: var(--backgroundBlack);
+}
+.services-websites__section3_servicesPage--gridItem:hover h4 {
+  color: white;
+}
+.services-websites__section3_servicesPage--gridItem:hover p {
+  color: white;
+}
+.services-websites__section3_servicesPage--gridItem h4 {
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  margin: 2px 0%;
+  font-size: 1.8rem;
+}
+.services-websites__section3_servicesPage--gridItem img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  height: 300px;
+  margin: 5px 0%;
+}
+
+.services-websites__section3_servicesPage--gridItem p {
+  font-family: var(--crimsonFont);
+  text-align: left;
+  width: 100%;
+  color: var(--lightGray);
+  height: 200px;
+  padding: 0px 5px;
+  font-size: 1.2rem;
+}
+.services-websites__section3_servicesPage--gridItem button {
+  height: 50px;
+  width: 160px;
+}
+/* Media Queris */
+@media (max-width: 1200px) {
+  .services-websites__section3_servicesPage--serviceGrid {
+    grid-template-rows: minmax(850px, auto);
+    width: 95%;
+  }
+  .services-websites__section3_web img {
+    object-fit: cover;
+  }
+  .services-websites__section3_mobile_applications img {
+    object-fit: cover;
+  }
+  .services-websites__section3_servicesPage--gridItem img {
+    height: 300px;
+  }
+  .services-websites__section3_servicesPage--gridItem p {
+    height: 280px;
+  }
+}
+@media (max-width: 992px) {
+  .services-websites__section3_servicesPage--serviceGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(650px, auto));
+  }
+
+  .services-websites__section3_servicesPage--gridItem {
+    width: 60%;
+    margin: 0px auto;
+  }
+
+  .services-websites__section3_servicesPage--gridItem img {
+    height: 300px;
+  }
+  .services-websites__section3_servicesPage--gridItem p {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-websites__section3_servicesPage--gridItem {
+    width: 90%;
+  }
+  .services-websites__section3_servicesPage--gridItem button {
+    height: 50px;
+    width: 170px;
+  }
+  .services-websites__section3_servicesPage--gridItem
+    button
+    .custom-button_matter {
+    font-size: 0.9rem;
+  }
+
+  .services-websites__section3_servicesPage--gridItem
+    button
+    .custom-button_icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  .services-websites__section3_servicesPage--serviceGrid {
+    grid-template-rows: 675px 675px 500px;
+  }
+
+  .services-websites__section3_servicesPage--gridItem {
+    width: 100%;
+  }
+  .services-websites__section3_servicesPage--gridItem img {
+    height: 200px;
+  }
+  .services-websites__section3_servicesPage--gridItem p {
+    height: 200px;
+  }
+}

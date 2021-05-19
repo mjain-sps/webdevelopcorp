@@ -1,0 +1,25 @@
+.enterprise-sol__section2 {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 85%;
+  border: 1px solid green;
+  justify-content: flex-start;
+  align-items: center;
+}
+.enterprise-sol__section2 img {
+  width: 65%;
+  object-position: center;
+  object-fit: contain;
+  margin: 0px 10px;
+}
+.enterprise-sol__section2 div {
+  width: 30%;
+}
+.enterprise-sol__section2 div p {
+  margin: 20px 0px;
+  padding: 10px;
+}
+.enterprise_sol-section2--icon {
+  margin: 0px 10px;
+  color: black;
+}

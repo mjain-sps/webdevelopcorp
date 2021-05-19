@@ -19,6 +19,8 @@
   text-align: center;
   width: 100%;
   color: var(--orange);
+  font-family: var(--crimsonFont);
+  font-weight: bold;
 }
 .servicesPage--header h1 {
   text-align: center;
@@ -102,6 +104,19 @@
 @media (max-width: 768px) {
   .servicesPage--gridItem {
     width: 90%;
+  }
+  .servicesPage--gridItem button {
+    height: 50px;
+    width: 170px;
+  }
+  .servicesPage--gridItem button .custom-button_matter {
+    font-size: 0.9rem;
+  }
+
+  .servicesPage--gridItem button .custom-button_icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
   }
 }
 
