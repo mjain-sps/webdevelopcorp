@@ -74,7 +74,12 @@ function ServicesPage({ history }) {
                 integrate your existing web portals into a five start mobile
                 application, enhancing your reach to your prospective audience
               </p>
-              <CustomButton type="button">READ MORE..</CustomButton>
+              <CustomButton
+                type="button"
+                onClick={() => history.push("/mobile-applications")}
+              >
+                READ MORE..
+              </CustomButton>
             </div>
           </div>
         </div>

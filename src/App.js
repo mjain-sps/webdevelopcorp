@@ -4,6 +4,7 @@ import AboutPage from "./Pages/AboutPage/AboutPage";
 import ServicesPage from "./Pages/ServicesPages/ServicesPage";
 import Websites from "./Pages/ServicesDetails/WebSites/Websites";
 import EnterpriseSol from "./Pages/ServicesDetails/EnterprisesSolution/EnterpriseSol";
+import MobileApplications from "./Pages/ServicesDetails/MobileApplication/MobileApplications";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,11 @@ function App() {
           exact
           path="/web-application-enterprise-solution"
           component={EnterpriseSol}
+        />
+        <Route
+          exact
+          path="/mobile-applications"
+          component={MobileApplications}
         />
       </Switch>
     </BrowserRouter>

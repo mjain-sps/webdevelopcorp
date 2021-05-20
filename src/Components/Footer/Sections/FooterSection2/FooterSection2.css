@@ -1,0 +1,61 @@
+.footer_main-content--wrapper {
+  background-color: #0c1623;
+  width: 100%;
+}
+.footer_main--content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 55%;
+  margin: auto;
+  padding: 30px 0px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer_main--content__Services,
+.footer_main--content__ContactUs {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 45%;
+}
+.footer_main--content__Services h4 {
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.footer_main--content__ContactUs h4 {
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.footer_servcies_main--div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px 10px;
+}
+.footer_servcies_main--div div {
+  width: 45%;
+}
+.footer_servcies_main--div div a,
+.footer_main--content__ContactUs p,
+.footer_main--content__ContactUs a {
+  display: block;
+  color: #9eaab9;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: var(--crimsonFont);
+  margin: 15px 0px;
+}
+.footer_servcies_main--div div a:hover,
+.footer_main--content__ContactUs a:hover {
+  color: white;
+}
+
+.footer_contactUs--icon {
+  color: var(--lightPink);
+  margin: 0px 10px 0px 0px;
+}

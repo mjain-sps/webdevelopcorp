@@ -1,0 +1,46 @@
+.mobileApplications--section1--wrapper {
+  width: 85%;
+  margin: auto;
+  padding: 10px;
+}
+.mobileApplications--section1--wrapper h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.mobileApplications--section1--wrapper p {
+  font-size: 1.2rem;
+  color: var(--lightGray);
+  font-family: var(--crimsonFont);
+}
+.mobileApplications--section1--wrapper img {
+  width: 100%;
+  object-fit: contain;
+}
+@media (max-width: 992px) {
+  .mobileApplications--section1--wrapper p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobileApplications--section1--wrapper {
+    width: 100%;
+  }
+  .mobileApplications--section1--wrapper h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .mobileApplications--section1--wrapper p {
+    font-size: 1rem;
+  }
+  .mobileApplications--section1--wrapper img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+@media (max-width: 576px) {
+  .mobileApplications--section1--wrapper h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}

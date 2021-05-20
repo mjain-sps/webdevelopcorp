@@ -1,0 +1,51 @@
+.footer--wrapper {
+  background-color: var(--backgroundBlack);
+  height: 400px;
+  width: 100vw;
+}
+.footer_section1 h1 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  padding: 40px 0px;
+}
+.footer_section3 {
+  display: flex;
+  background-color: var(--backgroundBlack);
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  height: 100px;
+}
+.footer_termsConditions {
+  width: 45%;
+}
+.footer_termsConditions div {
+  display: inline-block;
+  height: 90px;
+  margin: auto 40px;
+  padding: 0px 30px;
+}
+.footer_termsConditions div:hover {
+  background-color: black;
+  border-bottom: 1px solid var(--lightPink);
+}
+.footer_termsConditions div a {
+  color: white;
+  text-decoration: none;
+  line-height: 90px;
+  font-size: 1.1rem;
+}
+.footer--signature {
+  width: 35%;
+}
+.footer--signature h4 {
+  color: white;
+  width: max-content;
+}
+.footer--signature span {
+  color: var(--lightPink);
+}
