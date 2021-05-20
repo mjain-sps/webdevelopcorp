@@ -19,3 +19,23 @@
   margin: 20px 0px;
   font-family: var(--crimsonFont);
 }
+@media (max-width: 1200px) {
+  .enterprise-sol__section1 h1 {
+    font-size: 3rem;
+    margin: 15px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .enterprise-sol__section1 h1 {
+    font-size: 2.5rem;
+    margin: 14px 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .enterprise-sol__section1 h1 {
+    font-size: 2rem;
+    margin: 12px 0px;
+  }
+}

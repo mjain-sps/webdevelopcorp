@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDotCircle } from "@fortawesome/free-solid-svg-icons";
 //import Images
-import webBasedEnterpriseSolutions from "../../../assets/img/service/web-based-enterprise-solutions.jpg";
+import webBasedEnterpriseSolutions from "../../../../../assets/img/service/web-based-enterprise-solutions.jpg";
 import "./EnterpriseSection2.css";
 function EnterpriseSection2() {
   return (
