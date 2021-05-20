@@ -18,6 +18,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 45%;
+  border: 1px solid yellow;
 }
 .footer_main--content__Services h4 {
   width: 100%;
@@ -59,3 +60,51 @@
   color: var(--lightPink);
   margin: 0px 10px 0px 0px;
 }
+
+@media (max-width: 1200px) {
+  .footer_servcies_main--div div a,
+  .footer_main--content__ContactUs p,
+  .footer_main--content__ContactUs a {
+    font-size: 1.1rem;
+    margin: 10px 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer_main--content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer_main--content {
+    width: 100%;
+    padding: 20px 10px;
+    border: 1px solid white;
+  }
+  .footer_main--content__Services,
+  .footer_main--content__ContactUs {
+    width: 49%;
+  }
+}
+
+@media (max-width: 568px) {
+  .footer_main--content__Services,
+  .footer_main--content__ContactUs {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_servcies_main--div div a {
+    width: 100%;
+    text-align: center;
+  }
+  .footer_main--content__ContactUs p,
+  .footer_main--content__ContactUs a {
+    text-align: left;
+    width: 100%;
+    padding: 0px 20px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
