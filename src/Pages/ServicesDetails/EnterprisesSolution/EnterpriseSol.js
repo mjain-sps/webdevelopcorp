@@ -8,6 +8,8 @@ import enterpriseBackGround from "../../../assets/img/banner/Web-application-dev
 import "./EnterpriseSol.css";
 //importing Sections
 import EnterpriseSection2 from "./Sections/Section2/EnterpriseSection2";
+import EnterpriseSolSection3 from "./Sections/Section3/EnterpriseSolSection3";
+import EnterpriseSolSection4 from "./Sections/Section4/EnterpriseSolSection4";
 
 function EnterpriseSol() {
   return (
@@ -39,9 +41,13 @@ function EnterpriseSol() {
             the enterprise where they can concentrate on their business and
             grow.
           </p>
-          {/* Section 2 */}
-          <EnterpriseSection2 />
         </div>
+        {/* Section 2 */}
+        <EnterpriseSection2 />
+        {/* Section3 */}
+        <EnterpriseSolSection3 />
+        {/* Section 4 */}
+        <EnterpriseSolSection4 />
       </div>
       <GetInTouch />
     </Layout>

@@ -1,0 +1,40 @@
+.enterprise-sol-section3__wrapper {
+  width: 100vw;
+  background-color: var(--backgroundBlack);
+  padding: 20px 10px;
+  text-align: center;
+}
+.enterprise-sol-section3__wrapper h1 {
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  margin: 20px 0px;
+}
+.enterprise-sol-section3__wrapper img {
+  width: 85%;
+  object-fit: cover;
+  object-position: center;
+  border: 0.5px solid var(--lightPink);
+  margin: 20px 0px;
+}
+
+@media (max-width: 768px) {
+  .enterprise-sol-section3__wrapper h1 {
+    font-size: 3rem;
+    margin: 10px 0px;
+  }
+}
+
+@media (max-width: 568px) {
+  .enterprise-sol-section3__wrapper h1 {
+    font-size: 2rem;
+    margin: 8px 0px;
+  }
+  .enterprise-sol-section3__wrapper img {
+    width: 100%;
+    border: none;
+    object-fit: contain;
+    margin: 20px 0px;
+  }
+}

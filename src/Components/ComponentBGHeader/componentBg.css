@@ -6,7 +6,7 @@
   position: relative;
 }
 .bgHeader--title {
-  font-size: 6rem;
+  font-size: 4rem;
   color: white;
   position: absolute;
   top: 30vh;
@@ -14,7 +14,7 @@
 }
 @media (max-width: 992px) {
   .bgHeader--title {
-    font-size: 5rem;
+    font-size: 3rem;
     top: 35vh;
   }
 }
@@ -26,9 +26,9 @@
     padding: 0%;
   }
   .bgHeader--title {
-    font-size: 4rem;
+    font-size: 3rem;
     color: white;
-    top: 15vh;
+    top: 10vh;
   }
 }
 @media (max-width: 576px) {
@@ -39,7 +39,14 @@
     padding: 0%;
   }
   .bgHeader--title {
-    font-size: 3rem;
-    top: 10vh;
+    font-size: 2.5rem;
+    top: 2vh;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .bgHeader--title {
+    font-size: 2rem;
+    top: 2vh;
   }
 }

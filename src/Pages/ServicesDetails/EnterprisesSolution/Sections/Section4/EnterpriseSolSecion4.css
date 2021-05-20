@@ -1,0 +1,21 @@
+.enterprise-sol-section4__wrapper {
+  width: 100vw;
+  padding: 20px 10px;
+  text-align: center;
+}
+.enterprise-sol-section4__wrapper img {
+  width: 85%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .enterprise-sol-section4__wrapper {
+    padding: 0px;
+    text-align: center;
+    margin: 20px 0px;
+  }
+  .enterprise-sol-section4__wrapper img {
+    width: 100%;
+  }
+}
