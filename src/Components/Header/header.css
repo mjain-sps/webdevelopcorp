@@ -21,7 +21,7 @@
 }
 .header-companyinfo span {
   color: var(--black);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   font-family: "Oswald", sans-serif;
 }
@@ -81,6 +81,7 @@
 .toggle-Menu {
   width: 10%;
   color: white;
+  margin-right: 15px;
 }
 .bars-icon {
   width: 30px;
@@ -159,7 +160,7 @@
     top: 0%;
     right: 0%;
     background-color: var(--backgroundBlack);
-    padding: 0px 15px;
+    padding: 0px 20px;
     z-index: 20;
   }
   .toggle_header--md--title {
@@ -184,7 +185,7 @@
   .toggle_header--md--navItems a {
     font-size: 1rem;
     color: white;
-
+    text-decoration: none;
     margin: 20px 0px;
   }
   .toggle_header--md--navItems a:hover {
@@ -203,8 +204,43 @@
 }
 
 @media (max-width: 576px) {
+  .header-wrapper {
+    height: 120px;
+  }
+
+  /* Company Info CSS */
+  .header-companyinfo {
+    height: 30px;
+  }
+  .header-companyinfo span {
+    font-size: 14px;
+  }
+  .header-icon {
+    color: var(--lightPink);
+    margin: 0 2px;
+  }
+  .header-companyinfo-child1 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .header-companyinfo--email {
+    margin: 0px 5px 0px 0px;
+  }
+  /* Header nav starts here */
+  .header-nav {
+    height: 90px;
+  }
+  .header-nav--wrapper {
+    padding: 5px 10px;
+    width: 100%;
+  }
+  .header-brandname {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
   .toggle_header--md__wrapper {
     width: 100vw;
-    padding: 0px 20px;
   }
 }

@@ -97,6 +97,10 @@
     width: 100%;
     text-align: center;
   }
+  .footer_main--content__ContactUs h4 {
+    text-align: left;
+    padding: 0px 20px;
+  }
   .footer_main--content__ContactUs p,
   .footer_main--content__ContactUs a {
     text-align: left;

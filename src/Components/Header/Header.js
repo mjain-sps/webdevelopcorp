@@ -10,8 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import "./header.css";
 
-function Header({ scrollable }) {
-  console.log("from header", scrollable);
+function Header() {
   //Defining state variables
   const [toggleMenu, setToggleMenu] = useState(false);
   return (

@@ -7,7 +7,6 @@ function Collapsible({ answers }) {
   function toggleCollapsibleAnswer(index) {
     setClicked(!clicked);
     if (domSelected && domSelected === index) {
-      console.log("entering null loop");
       setDomSelected(null);
     } else {
       const x = 0;
@@ -16,7 +15,6 @@ function Collapsible({ answers }) {
       setDomSelected(index);
     }
   }
-  console.log(domSelected);
   return (
     <div className="section6-collapsible__wrapper">
       {answers.length

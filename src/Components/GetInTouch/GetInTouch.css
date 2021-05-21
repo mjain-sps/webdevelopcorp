@@ -1,6 +1,6 @@
 .getInTouch--wrapper {
   width: 100vw;
-  height: 500px;
+  height: 700px;
   background-color: #ffffff;
   position: relative;
 }
@@ -94,6 +94,9 @@ textarea::placeholder {
   line-height: 35px;
 }
 @media (max-width: 576px) {
+  .getInTouch--wrapper {
+    height: 570px;
+  }
   .getInTouch-form {
     width: 85%;
     left: 5%;

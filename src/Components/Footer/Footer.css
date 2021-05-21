@@ -99,9 +99,40 @@
     width: 100%;
   }
 }
+@media (max-width: 576px) {
+  .footer_section3 {
+    padding: 0px 20px;
+    height: 100px;
+  }
+  .footer_termsConditions {
+    width: 95%;
+  }
+
+  .footer_termsConditions div {
+    display: inline-block;
+    height: 40px;
+    margin: auto 0px;
+    padding: 0px 5px;
+  }
+  .footer_termsConditions div a {
+    line-height: 40px;
+    font-size: 1rem;
+  }
+  .footer--signature h4,
+  .footer--signature span {
+    font-size: 1rem;
+  }
+}
 @media (min-width: 320px) and (max-width: 400px) {
   .footer_section1 h1 {
     font-size: 1rem;
     padding: 20px 0px;
+  }
+  .footer_termsConditions div a {
+    font-size: 0.9rem;
+  }
+  .footer--signature h4,
+  .footer--signature span {
+    font-size: 0.9rem;
   }
 }
