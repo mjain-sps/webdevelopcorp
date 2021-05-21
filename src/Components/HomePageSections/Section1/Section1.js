@@ -41,15 +41,17 @@ function Section1({ scrollable, history }) {
         <div className="homePage-section1--content">
           <div className="section1-leftSection">
             <div className="section1--navbar">
-              <Link to="/services/websites">Web sites</Link>
+              <Link to="/websites">Web sites</Link>
               <div className="section1--navbar__separator"></div>
-              <Link to="/services/websites">Enterprise Solutions</Link>
+              <Link to="/web-application-enterprise-solution">
+                Enterprise Solutions
+              </Link>
               <div className="section1--navbar__separator"></div>
 
-              <Link to="/services/websites">Web Apps</Link>
+              <Link to="/web-application-enterprise-solution">Web Apps</Link>
               <div className="section1--navbar__separator"></div>
 
-              <Link to="/services/websites">Mobile Apps</Link>
+              <Link to="/mobile-applications">Mobile Apps</Link>
             </div>
 
             <div className="section1--tagLine">
