@@ -9,30 +9,30 @@ import Section4 from "../../Components/HomePageSections/Section4/Section4";
 import Section5 from "../../Components/HomePageSections/Section5/Section5";
 import Section6 from "../../Components/HomePageSections/Section6/Section6";
 
-function HomePage({ history }) {
+function HomePage() {
   //useStaet constants
-  const [scrollable, setScrollable] = useState(null);
+  // const [scrollable, setScrollable] = useState(null);
 
-  // HandleSCroll function
-  const handleScroll = () => {
-    setScrollable(window.pageYOffset);
-  };
+  // // HandleSCroll function
+  // const handleScroll = () => {
+  //   setScrollable(window.pageYOffset);
+  // };
 
   // useEffect to get the DOM elements and trigger observer
-  useEffect(() => {
-    window.addEventListener("scroll", () => handleScroll());
+  // useEffect(() => {
+  //   window.addEventListener("scroll", () => handleScroll());
 
-    // Component did unmount
-    return () => {
-      window.removeEventListener("scroll", () => handleScroll());
-    };
-  }, []);
+  //   // Component did unmount
+  //   return () => {
+  //     window.removeEventListener("scroll", () => handleScroll());
+  //   };
+  // }, []);
   // console.log("scrollable", scrollable);
   return (
     <>
       <Layout>
         {/* Section 1 */}
-        <Section1 scrollable={scrollable} />
+        <Section1 />
         {/* Section -2 */}
         <Section2 />
         {/* Section 3 ---> About us on Home Page */}

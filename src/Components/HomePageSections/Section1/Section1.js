@@ -7,11 +7,11 @@ import { Link, withRouter } from "react-router-dom";
 import ps1 from "../../../assets/img/shape/ps1.png";
 import ps3 from "../../../assets/img/shape/ps3.png";
 import ps2 from "../../../assets/img/shape/ps2.png";
-function Section1({ scrollable, history }) {
+function Section1({ history }) {
   return (
     <div>
       <div className="homePage_section1--wrapper">
-        <img
+        {/* <img
           src={ps1}
           alt=""
           className="random-shape-animation"
@@ -29,7 +29,7 @@ function Section1({ scrollable, history }) {
           alt=""
           className="random-shape-animation-3"
           style={{ transform: `rotateY(${scrollable * -3}deg)` }}
-        />
+        /> */}
         <div className="section1--bg-images__container">
           <div className="section1--bgImage"></div>
           <div className="section1--bgImage--frame-1"></div>

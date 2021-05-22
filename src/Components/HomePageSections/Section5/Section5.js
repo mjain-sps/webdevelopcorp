@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Importing Images for section5
 import furnitureEcommerceStoreWebdevelopcorp from "../../../assets/img/portfolio/Furniture-ecommerce-store-webdevelopcorp.jpg";
@@ -11,28 +11,165 @@ import ecommerceClothingStoreApplication from "../../../assets/img/portfolio/E-c
 
 //Importing CSS
 import "./home_section5.css";
+//imporintg GIF
+import loadingSpinner from "../../../assets/GIF/loading_spinner.gif";
 function Section5() {
+  useEffect(() => {
+    //getting DOM
+    const furnitureDOM = document.querySelector(".furnitureEcommerce");
+    const restaurantDOM = document.querySelector(".restaurantApp-rowspan");
+    const furnitureEcommerceDOM = document.querySelector(
+      ".furnitureEcommerce-col-span"
+    );
+    const danceAcademyDOM = document.querySelector(".danceAcademy");
+    const fashionClothingDOM = document.querySelector(
+      ".fashionClothing-col-span"
+    );
+    const foodMobileDOM = document.querySelector(".foodMobileApp");
+    const ecommerceMobileDOM = document.querySelector(".ecommerceMobileApp");
+    //intersection observer for furniture -ecommerce image
+    const furnitureObserver = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.src = furnitureEcommerceStoreWebdevelopcorp;
+          furnitureObserver.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        threshold: [0],
+        rootMargin: "200px",
+      }
+    );
+
+    //intersection observer for restaurantApp image
+    const restaurantObserver = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.src = restaurantWebsiteTemplateDesign;
+          restaurantObserver.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        threshold: [0],
+        rootMargin: "200px",
+      }
+    );
+
+    //intersection observer for furnitureEcommerce-Col-Span image
+    const furnitureEcommerceColSpan = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.src = furnitureEcommerceApplication;
+          furnitureEcommerceColSpan.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        threshold: [0],
+        rootMargin: "200px",
+      }
+    );
+
+    //intersection observer for Dance Academy image
+    const danceAcademyObserver = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.src = danceAcademyWebsite;
+          danceAcademyObserver.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        threshold: [0],
+        rootMargin: "200px",
+      }
+    );
+
+    //intersection observer for Fashion Clothing image
+    const fashionClothingObserver = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.src = fashionClothingEcommerceApp;
+          fashionClothingObserver.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        threshold: [0],
+        rootMargin: "200px",
+      }
+    );
+
+    //intersection observer for Mobile App
+    const mobileAppObserver = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.src = onlineFoodDeliveryMobileApplication;
+          mobileAppObserver.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        threshold: [0],
+        rootMargin: "200px",
+      }
+    );
+
+    //intersection observer for Ecommerce Mobile App
+    const ecommerceMobileAppObserver = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          entry.target.src = ecommerceMobileDOM;
+          ecommerceMobileAppObserver.unobserve(entry.target);
+        }
+      },
+      {
+        root: null,
+        threshold: [0],
+        rootMargin: "200px",
+      }
+    );
+
+    furnitureObserver.observe(furnitureDOM);
+    restaurantObserver.observe(restaurantDOM);
+    furnitureEcommerceColSpan.observe(furnitureEcommerceDOM);
+    danceAcademyObserver.observe(danceAcademyDOM);
+    fashionClothingObserver.observe(fashionClothingDOM);
+    mobileAppObserver.observe(foodMobileDOM);
+    ecommerceMobileAppObserver.observe(ecommerceMobileDOM);
+
+    return () => {
+      furnitureObserver.unobserve(furnitureDOM);
+      restaurantObserver.unobserve(restaurantDOM);
+      furnitureEcommerceColSpan.unobserve(furnitureEcommerceDOM);
+      danceAcademyObserver.unobserve(danceAcademyDOM);
+      fashionClothingObserver.unobserve(fashionClothingDOM);
+      mobileAppObserver.unobserve(foodMobileDOM);
+      ecommerceMobileAppObserver.unobserve(ecommerceMobileDOM);
+    };
+  }, []);
   return (
     <div className="homePage_section5--wrapper">
-      <img src={furnitureEcommerceStoreWebdevelopcorp} alt="" />
+      <img src={loadingSpinner} alt="" className="furnitureEcommerce" />
+      <img src={loadingSpinner} alt="" className="restaurantApp-rowspan" />
       <img
-        src={restaurantWebsiteTemplateDesign}
-        alt=""
-        className="restaurantApp-rowspan"
-      />
-      <img
-        src={furnitureEcommerceApplication}
+        src={loadingSpinner}
         alt=""
         className="furnitureEcommerce-col-span"
       />
-      <img src={danceAcademyWebsite} alt="" />
-      <img
-        src={fashionClothingEcommerceApp}
-        alt=""
-        className="fashionClothing-col-span"
-      />
-      <img src={onlineFoodDeliveryMobileApplication} alt="" />
-      <img src={ecommerceClothingStoreApplication} alt="" />
+      <img src={loadingSpinner} alt="" className="danceAcademy" />
+      <img src={loadingSpinner} alt="" className="fashionClothing-col-span" />
+      <img src={loadingSpinner} alt="" className="foodMobileApp" />
+      <img src={loadingSpinner} alt="" className="ecommerceMobileApp" />
     </div>
   );
 }
