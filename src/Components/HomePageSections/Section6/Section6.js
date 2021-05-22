@@ -1,7 +1,7 @@
 import React from "react";
 
 //Importing images for section 6
-import frequentlyAskedQuestionsWebdevelopcorp from "../../../assets/img/misc/Frequently-asked-questions-webdevelopcorp.jpg";
+import frequentlyAskedQuestionsWebdevelopcorp from "../../../assets/img/Compressed/Frequently-asked-questions-webdevelopcorp-min.jpg";
 
 //Importing CSS
 import "./home_section6.css";

@@ -7,7 +7,7 @@ import { withRouter } from "react-router-dom";
 //Importing CSS
 import "./home_section2.css";
 //Importing images for section2
-import webDevelopCorpFeatures from "../../../assets/img/banner/WebDevelopmentCorp-Solutions-offered.png";
+import webDevelopCorpFeatures from "../../../assets/img/Compressed/WebDevelopmentCorp-Solutions-offered-min.png";
 //Importing FontIcons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

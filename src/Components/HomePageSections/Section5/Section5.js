@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 
 // Importing Images for section5
-import furnitureEcommerceStoreWebdevelopcorp from "../../../assets/img/portfolio/Furniture-ecommerce-store-webdevelopcorp.jpg";
-import restaurantWebsiteTemplateDesign from "../../../assets/img/portfolio/Restaurant-website-template-design.jpg";
-import furnitureEcommerceApplication from "../../../assets/img/portfolio/furniture-e-commerce-webapplication.jpg";
-import danceAcademyWebsite from "../../../assets/img/portfolio/Dance-academy-website-template.jpg";
-import fashionClothingEcommerceApp from "../../../assets/img/portfolio/fashion-clothing-accessories-ecommerce-webapp.jpg";
-import onlineFoodDeliveryMobileApplication from "../../../assets/img/portfolio/Online-food-delivery-mobile-application-webdevelopcorp.jpg";
-import ecommerceClothingStoreApplication from "../../../assets/img/portfolio/E-commerce-clothing-store-webapplication-webdevelopcorp.jpg";
+import furnitureEcommerceStoreWebdevelopcorp from "../../../assets/img/Compressed/Furniture-ecommerce-store-webdevelopcorp-min.jpg";
+import restaurantWebsiteTemplateDesign from "../../../assets/img/Compressed/Restaurant-website-template-design-min.jpg";
+import furnitureEcommerceApplication from "../../../assets/img/Compressed/furniture-e-commerce-webapplication-min.jpg";
+import danceAcademyWebsite from "../../../assets/img/Compressed/Dance-academy-website-template-min.jpg";
+import fashionClothingEcommerceApp from "../../../assets/img/Compressed/fashion-clothing-accessories-ecommerce-webapp-min.jpg";
+import onlineFoodDeliveryMobileApplication from "../../../assets/img/Compressed/food-delivery-mobile-application-min.jpg";
+import ecommerceClothingStoreApplication from "../../../assets/img/Compressed/E-commerce-clothing-store-webapplication-webdevelopcorp-min.jpg";
 
 //Importing CSS
 import "./home_section5.css";
@@ -128,7 +128,7 @@ function Section5() {
       (entries) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
-          entry.target.src = ecommerceMobileDOM;
+          entry.target.src = ecommerceClothingStoreApplication;
           ecommerceMobileAppObserver.unobserve(entry.target);
         }
       },

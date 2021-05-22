@@ -1,8 +1,8 @@
 import React from "react";
 
 //Importing Images - Section 3
-import lookLikeAnExpert1 from "../../../assets/img/about/Look-like-an-expert-from-start-1.jpg";
-import lookLikeAnExpert2 from "../../../assets/img/about/Look-like-an-expert-from-start-2.jpg";
+import lookLikeAnExpert1 from "../../../assets/img/Compressed/Look-like-an-expert-from-start-1-min.jpg";
+import lookLikeAnExpert2 from "../../../assets/img/Compressed/Look-like-an-expert-from-start-2-min.jpg";
 
 //Imporitn CSS
 import "./home_section3.css";
